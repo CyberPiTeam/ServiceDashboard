@@ -53,6 +53,7 @@ const testPort = (port,service)=>{
 
 			});
 		}catch(e){
+			console.error(e);
 			reject(fail(service,'',port));
 		}
 	});
@@ -62,13 +63,11 @@ const testPort = (port,service)=>{
 
 const fail = (service,message,port)=>{
 	//console.error(`${fgRed}❌ ${service.name} (${service.hostname}) failed on port ${port}: ${message}`);
-	if(port.hidden) port = null;
-	else if(port.port) port = port.port
 	return {
 		success:false,
-		name:service.name,
+		name:(port && port.name)?port.name:service.name,
 		hostname:service.hostname,
-		port,
+		port:port.hidden?null:port.port?port.port:port,
 		message:String(message)
 	}
 
@@ -78,9 +77,9 @@ const pass = (service,port)=>{
 	//console.log(`${fgGreen}✓ ${service.name} (${service.hostname}) passed on port ${port}.`);
 	return {
 		success:true,
-		name:service.name,
+		name:(port && port.name)?port.name:service.name,
 		hostname:service.hostname,
-		port
+		port:port.hidden?null:port.port?port.port:port,
 	}
 
 }

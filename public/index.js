@@ -15,7 +15,7 @@ const doUpdate = async ()=>{
 
 const makeElement = result=>{
 	const span = document.createElement('div');
-	span.innerText = `${result.success?'✓':'❌'} ${result.name} (${result.hostname}) ${result.success?'passed':'failed'} on port ${result.port?result.port:'[Redacted]'} ${result.message?(': ' + result.message):''}`;
+	span.innerText = `${result.success?'✔️':'❌'} ${result.name} (${result.hostname}) ${result.success?'passed':'failed'} on port ${result.port?result.port:'[Redacted]'} ${result.message?(': ' + result.message):''}`;
 	span.className = result.success?'pass':'fail';
 	return span;
 }

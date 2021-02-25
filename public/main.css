@@ -2,13 +2,13 @@ body {
 	background: black;
 	font-family: Arial;
 	height: 100%;
-	text-align: center;
+	/*text-align: center;*/
 	width: 100%;
 	color: white;
 }
 .fail{
-
+	color:#d63232;
 }
 .pass{
-
+	color:#329932;
 }

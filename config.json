@@ -56,23 +56,27 @@
 			"ports":[]
 		},
 		{
-			"name":"Network Services Challenges",
+			"name":"Net 500",
 			"hostname":"netchals.cyberpi.local",
 			"http":true,
 			"testPath":"/",
 			"ports":
 			[
 				{
+					"name":"Net 100",
 					"port":53
 				},
 				{
+					"name":"Net 200",
 					"port":21
 				},
 				{
+					"name":"Net 300",
 					"port":28064,
 					"hidden":true
 				},
 				{
+					"name":"Net 400",
 					"port":2022
 				}
 			]
