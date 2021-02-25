@@ -1,0 +1,82 @@
+{
+	"timeout":4000,
+	"services":
+	[
+		{
+			"name":"Content Gamification Platform",
+			"hostname":"game.cyberpi.local",
+			"http":true,
+			"testPath":"/",
+			"ports":[]
+		},
+		{
+			"name":"Shell Server",
+			"hostname":"shell.cyberpi.local",
+			"http":true,
+			"testPath":"/",
+			"ports":[
+				{
+					"port":22
+				}
+			]
+		},
+		{
+			"name":"Web 100",
+			"hostname":"static.cyberpi.local",
+			"http":true,
+			"testPath":"/",
+			"ports":[]
+		},
+		{
+			"name":"Web 200",
+			"hostname":"readfile.cyberpi.local",
+			"http":true,
+			"testPath":"/",
+			"ports":[]
+		},
+		{
+			"name":"Web 300",
+			"hostname":"flagrequest.cyberpi.local",
+			"http":true,
+			"testPath":"/",
+			"ports":[]
+		},
+		{
+			"name":"Web 400",
+			"hostname":"cookiechal.cyberpi.local",
+			"http":true,
+			"testPath":"/",
+			"ports":[]
+		},
+		{
+			"name":"Web 500",
+			"hostname":"pingapp.cyberpi.local",
+			"http":true,
+			"testPath":"/",
+			"ports":[]
+		},
+		{
+			"name":"Network Services Challenges",
+			"hostname":"netchals.cyberpi.local",
+			"http":true,
+			"testPath":"/",
+			"ports":
+			[
+				{
+					"port":53
+				},
+				{
+					"port":21
+				},
+				{
+					"port":28064,
+					"hidden":true
+				},
+				{
+					"port":2022
+				}
+			]
+		}
+	]
+
+}
